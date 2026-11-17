@@ -4,6 +4,7 @@
 Download dataset of Mar 1 - Nov 13 (27.3 GB)
 Go to the assignment 2 folder and run the following in powershell (make alternative arrangements if using bash):
 
+```
 New-Item -ItemType Directory -Force -Path ".\gharchive" | Out-Null
 
 # Mar 1–31
@@ -32,13 +33,16 @@ curl.exe --parallel --parallel-max 8 --fail --retry 3 --output "gharchive/2026-1
 
 # November 1–13
 curl.exe --parallel --parallel-max 8 --fail --retry 3 --output "gharchive/2026-11-#1-#2.json.gz" "https://data.gharchive.org/2026-11-[01-13]-[0-23].json.gz"
+```
 
 **then run:
 
+```
 python scripts/preprocess.py --raw gharchive --out data
+```
 
 
-## Run the notebook:
+Run the notebook:
 To get proof of the ablated model results, set RUN_ABLATIONS = True. Set it at False for a faster run with final output.
 
 
