@@ -43,6 +43,6 @@ python scripts/preprocess.py --raw gharchive --out data
 
 
 Run the notebook:
-To get proof of the ablated model results, set RUN_ABLATIONS = True. Set it at False for a faster run with final output.
+To get proof of the ablated model results, set RUN_ABLATIONS = True. Leave it at False for a faster run with final output.
 
 
